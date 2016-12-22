@@ -3,7 +3,10 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "babel src --out-dir lib",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "site:clean": "rimraf example/build",
+    "site:build": "cd example && npm run build",
+    "site:publish": "npm run site:clean && npm run site:build && cp CNAME example/build && cd example/build && git init && git commit --allow-empty -m 'update example' && git checkout -b gh-pages && touch .nojekyll && git add . && git commit -am 'update example' && git push git@github.com:buildize/gridual gh-pages --force"
   },
   "peerDependencies": {
     "react": "^0.13.0 || ^0.14.0 || ^15.0.0"
@@ -14,7 +17,8 @@
     "babel-preset-es2015": "6.9.0",
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-0": "^6.16.0",
-    "react": "^15.4.1"
+    "react": "^15.4.1",
+    "rimraf": "^2.5.4"
   },
   "version": "0.1.0"
 }
