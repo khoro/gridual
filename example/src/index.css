@@ -1,11 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700,900');
 
-* {
-  font-family: Raleway, Helvetica, Arial;
-}
-
 body {
-  padding-top: 40px;
+  padding: 40px 0;
+  font-family: Raleway, Helvetica, Arial;
 }
 
 .header {
@@ -61,6 +58,12 @@ h2 {
 }
 
 pre {
-  background: #f2f2f2;
-  padding-left: 20px;
+  padding: 0 20px !important;
+  font-size: 14px;
+  border-radius: 3px;
+  background: #ededff !important;
+}
+
+.token.operator {
+  background: transparent !important;
 }

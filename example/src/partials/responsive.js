@@ -33,18 +33,20 @@ export default () => (
     </Row>
 
     <pre>
+      <code className="language-jsx">
       {`
 import { Container, Row, Col } from 'gridual';
 
 <Container>
-<Row>
-<Col xs="1" sm="1/3" md="1/5" lg="1/10">
-</Col>
-<Col fill>
-</Col>
-</Row>
+  <Row>
+    <Col xs="1" sm="1/3" md="1/5" lg="1/10">
+    </Col>
+    <Col fill>
+    </Col>
+  </Row>
 </Container>
       `}
+      </code>
     </pre>
     <br />
   </Container>

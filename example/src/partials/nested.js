@@ -47,6 +47,7 @@ export default () => (
     </Row>
 
     <pre>
+      <code className="language-jsx">
       {`
 <Row>
   <Col md="1/2">
@@ -63,6 +64,7 @@ export default () => (
   </Col>
 </Row>
       `}
+      </code>
     </pre>
     <br />
   </Container>
