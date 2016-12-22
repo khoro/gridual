@@ -4,8 +4,8 @@ export default ({ children }) => {
   const styles = {
     display: 'flex',
     flexWrap: 'wrap',
-    marginRight: '-15px',
-    marginLeft: '-15px'
+    marginRight: '-10px',
+    marginLeft: '-10px'
   }
 
   return (

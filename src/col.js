@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
-var widthRatios = {};
+var widthRatios = {
+  '1': 100
+};
 
 for(var i = 1; i <= 50; i++) {
   for (var j = 1; j <= i; j++) {
@@ -31,8 +33,9 @@ export default class Col extends Component {
     let width;
 
     const styles = {
-      paddingLeft: '15px',
-      paddingRight: '15px'
+      paddingLeft: '10px',
+      paddingRight: '10px',
+      boxSizing: 'border-box'
     }
 
     if (windowWidth < 576) {

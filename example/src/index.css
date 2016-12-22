@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700,900');
+
+* {
+  font-family: Raleway, Helvetica, Arial;
+}
+
+body {
+  padding-top: 40px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.header h1 {
+  font-weight: 900;
+  text-align: center;
+  font-size: 80px;
+  margin-bottom: 0;
+}
+
+.header p {
+  padding-left: 60px;
+  margin-top: -10px;
+  font-size: 14px;
+}
+
+.red-area {
+  background: #5954D3;
+  height: 30px;
+  margin-bottom: 20px;
+}
+
+pre {
+  background: #f2f2f2;
+  padding-left: 20px;
+}
