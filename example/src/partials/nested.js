@@ -7,15 +7,15 @@ export default () => (
     <h2>Nested</h2>
     <Row>
       <Col md="1/2">
-        <div className="pink-area has-nested">
+        <div className="light-pink-area has-nested">
           <Row>
             <Col md="1/2">
-              <div className="dark-pink-area">
+              <div className="pink-area with-text">
                 inner grid column
               </div>
             </Col>
             <Col md="1/2">
-              <div className="dark-pink-area">
+              <div className="pink-area with-text">
                 inner grid column
               </div>
             </Col>
@@ -23,22 +23,22 @@ export default () => (
         </div>
       </Col>
       <Col md="1/4">
-        <div className="pink-area" />
+        <div className="light-pink-area" />
       </Col>
       <Col md="1/4">
-        <div className="pink-area" />
+        <div className="light-pink-area" />
       </Col>
     </Row>
     <Row>
       <Col sm="1" md="1/5">
-        <div className="pink-area" />
+        <div className="light-pink-area" />
       </Col>
       <Col sm="1" md="4/5">
-        <div className="pink-area has-nested">
+        <div className="light-pink-area has-nested">
           <Row>
             {range(10).map(() => (
               <Col md="1/4">
-                <div className="dark-pink-area" />
+                <div className="pink-area" />
               </Col>
             ))}
           </Row>

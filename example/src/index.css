@@ -26,14 +26,17 @@ body {
 h2 {
   border-bottom: 1px solid #eee;
   padding-bottom: 10px;
-  margin-top: 50px;
+  margin-top: 70px;
   color: #333;
 }
 
-.pink-area, .dark-pink-area {
+h4 {
+  margin-top: 60px;
+}
+
+.pink-area, .dark-pink-area, .light-pink-area {
   min-height: 35px;
   margin-bottom: 20px;
-  color: #a5a2f0;
   font-size: 14px;
   border-radius: 3px;
   overflow: hidden;
@@ -41,10 +44,14 @@ h2 {
 
 .pink-area {
   background: #5954D3;
+  color: #c4c1fb;
 }
 
-.dark-pink-area {
-  background: #403bb3;
+.light-pink-area {
+  background: #9c99f6;
+}
+
+.with-text {
   display: flex;
   align-items: center;
   justify-content: center;

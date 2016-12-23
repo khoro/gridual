@@ -12,6 +12,7 @@ class App extends Component {
         </div>
 
         <Partials.Responsive />
+        <Partials.Alignments />
         <Partials.Nested />
         <Partials.Footer />
       </div>
