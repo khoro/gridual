@@ -14,6 +14,7 @@ class App extends Component {
         <Partials.Responsive />
         <Partials.Alignments />
         <Partials.Nested />
+        <Partials.Square />
         <Partials.Reverse />
         <Partials.Footer />
       </div>

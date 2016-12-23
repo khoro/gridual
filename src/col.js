@@ -28,7 +28,7 @@ export default class Col extends Component {
   }
 
   render() {
-    const { xs, sm, md, lg, xl, fill, children } = this.props;
+    const { xs, sm, md, lg, xl, fill, square, children } = this.props;
     const { windowWidth } = this.state;
     let width;
 
@@ -58,9 +58,19 @@ export default class Col extends Component {
       styles.width = '100%';
     }
 
+    if (square) {
+
+    }
+
     return (
       <div style={styles}>
-        {children}
+        {square ? (
+          <div style={{ paddingBottom: '100%', position: 'relative' }}>
+            <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, right: 0 }}>
+              {children}
+            </div>
+          </div>
+        ) : children}
       </div>
     )
   }
