@@ -59,9 +59,9 @@ h4 {
 
 .has-nested {
   overflow: hidden;
-  height: calc(100% - 60px);
   padding: 20px;
-  margin-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 20;
 }
 
 pre {
