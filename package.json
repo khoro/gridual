@@ -1,6 +1,7 @@
 {
   "name": "gridual",
   "main": "lib/index.js",
+  "module": "src/index.js",
   "scripts": {
     "build": "babel src --out-dir lib",
     "prepublish": "npm run build",
