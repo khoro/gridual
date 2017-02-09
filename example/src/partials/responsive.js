@@ -37,7 +37,7 @@ export default () => (
       {`
 import { Container, Row, Col } from 'gridual';
 
-<Container>
+<Container maxWidth={optional}>
   <Row>
     <Col xs="1" sm="1/3" md="1/5" lg="1/10">
     </Col>
