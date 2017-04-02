@@ -1,9 +1,11 @@
 {
   "name": "gridual",
-  "main": "lib/index.js",
-  "module": "src/index.js",
+  "main": "lib-es5/index.js",
+  "module": "lib-es6/index.js",
   "scripts": {
-    "build": "babel src --out-dir lib",
+    "build:es5": "babel src --out-dir lib-es5",
+    "build:es6": "babel --no-babelrc src --out-dir lib-es6 --presets=stage-0,react",
+    "build": "npm run build:es5 && npm run build:es6",
     "prepublish": "npm run build",
     "site:clean": "rimraf example/build",
     "site:build": "cd example && npm run build",
@@ -21,5 +23,5 @@
     "react": "^15.4.1",
     "rimraf": "^2.5.4"
   },
-  "version": "0.1.4"
+  "version": "0.1.5"
 }
