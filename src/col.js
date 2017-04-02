@@ -53,7 +53,7 @@ export default class Col extends Component {
     if (width) {
       styles.width = widthRatios[width] && widthRatios[width] + '%' || width;
     } else if (fill){
-      styles.flex = '1 1 auto';
+      styles.flex = '1';
     } else {
       styles.width = '100%';
     }
