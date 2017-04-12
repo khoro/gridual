@@ -6,7 +6,7 @@ var widthRatios = {
 
 for(var i = 1; i <= 50; i++) {
   for (var j = 1; j <= i; j++) {
-    widthRatios[`${j}/${i}`] = j * 100 / i;
+    widthRatios[j + '/' + i] = j * 100 / i;
   }
 }
 
