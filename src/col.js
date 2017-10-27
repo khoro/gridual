@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { canUseDOM } from 'exenv';
 
 var widthRatios = {
   '1': 100
@@ -12,15 +13,15 @@ for(var i = 1; i <= 50; i++) {
 
 export default class Col extends Component {
   state = {
-    windowWidth: window.innerWidth
+    windowWidth: canUseDOM ? window.innerWidth : 5000
   };
 
   componentDidMount() {
-    window.addEventListener('resize', this.handleResize);
+    canUseDOM && window.addEventListener('resize', this.handleResize);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.handleResize);
+    canUseDOM && window.removeEventListener('resize', this.handleResize);
   }
 
   handleResize = () => {
@@ -56,10 +57,6 @@ export default class Col extends Component {
       styles.flex = '1';
     } else {
       styles.width = '100%';
-    }
-
-    if (square) {
-
     }
 
     return (
