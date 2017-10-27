@@ -40,3 +40,7 @@ import { Container, Row, Col } from 'gridual';
   </Row>
 </Container>
 ```
+
+## Who Uses Gridual
+
+- [Coorsy](https://coorsy.com)
