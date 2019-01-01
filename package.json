@@ -10,7 +10,8 @@
   },
   "peerDependencies": {
     "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react-dom": "^16.0.0",
+    "styled-components": "^4.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -20,11 +21,10 @@
     "@babel/preset-react": "^7.0.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "rimraf": "^2.6.2",
-    "styled-components": "^4.1.3"
+    "rimraf": "^2.6.2"
   },
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "dependencies": {
-    "exenv": "^1.2.2"
+    "styled-components": "^4.1.3"
   }
 }
