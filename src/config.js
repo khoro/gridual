@@ -7,7 +7,7 @@ const config = {
     xs: 576
   },
   maxWidth: '1180px',
-  gutter: 20
+  gutter: 30
 }
 
 export const configure = values => {

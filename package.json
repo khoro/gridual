@@ -23,7 +23,7 @@
     "react-dom": "^16.7.0",
     "rimraf": "^2.6.2"
   },
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0-alpha.4",
   "dependencies": {
     "styled-components": "^4.1.3"
   }

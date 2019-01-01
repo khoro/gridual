@@ -36,7 +36,7 @@ h4 {
 
 .pink-area, .dark-pink-area, .light-pink-area {
   min-height: 35px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-size: 14px;
   border-radius: 3px;
   overflow: hidden;
@@ -59,7 +59,7 @@ h4 {
 
 .has-nested {
   overflow: hidden;
-  padding: 20px;
+  padding: 30px;
   padding-bottom: 0;
 }
 
