@@ -1,4 +1,3 @@
 /node_modules
-/lib-es5
-/lib-es6
+/lib
 .DS_Store
