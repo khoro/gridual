@@ -23,14 +23,6 @@ export default () => (
         <div className="pink-area" />
       </Col>
     </Row>
-    <Row>
-      <Col md="500px">
-        <div className="pink-area" />
-      </Col>
-      <Col fill>
-        <div className="pink-area" />
-      </Col>
-    </Row>
 
     <pre>
       <code className="language-jsx">
@@ -40,8 +32,6 @@ import { Container, Row, Col } from 'gridual';
 <Container maxWidth={optional}>
   <Row>
     <Col xs="1" sm="1/3" md="1/5" lg="1/10">
-    </Col>
-    <Col fill>
     </Col>
   </Row>
 </Container>

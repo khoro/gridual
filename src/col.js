@@ -1,73 +1,61 @@
 import React, { Component } from 'react';
-import { canUseDOM } from 'exenv';
+import { BREAKS_POINTS } from './helpers';
 
-var widthRatios = {
+var WIDTH_RATIOS = {
   '1': 100
 };
 
 for(var i = 1; i <= 50; i++) {
   for (var j = 1; j <= i; j++) {
-    widthRatios[j + '/' + i] = j * 100 / i;
+    WIDTH_RATIOS[j + '/' + i] = j * 100 / i;
   }
 }
 
 export default class Col extends Component {
-  state = {
-    windowWidth: canUseDOM ? window.innerWidth : 5000
-  };
-
-  componentDidMount() {
-    canUseDOM && window.addEventListener('resize', this.handleResize);
-  }
-
-  componentWillUnmount() {
-    canUseDOM && window.removeEventListener('resize', this.handleResize);
-  }
-
-  handleResize = () => {
-    this.setState({ windowWidth: window.innerWidth });
-  }
-
   render() {
-    const { xs, sm, md, lg, xl, fill, square, children } = this.props;
-    const { windowWidth } = this.state;
-    let width;
+    const { square, children, ...rest } = this.props;
 
-    const styles = {
-      paddingLeft: '10px',
-      paddingRight: '10px',
-      boxSizing: 'border-box'
-    }
+    const breakKeys = Object.keys(BREAKS_POINTS);
 
-    if (windowWidth < 576) {
-      width = xs;
-    } else if (windowWidth < 768) {
-      width = sm || xs;
-    } else if (windowWidth < 992) {
-      width = md || sm || xs;
-    } else if (windowWidth < 1200) {
-      width = lg || md || sm || xs;
-    } else {
-      width = xl || lg || md || sm || xs;
-    }
+    const widths = breakKeys.map((breakKey, index) => {
+      return this.props[breakKeys.slice(index, breakKeys.length).find(i => this.props[i])];
+    });
 
-    if (width) {
-      styles.width = widthRatios[width] && widthRatios[width] + '%' || width;
-    } else if (fill){
-      styles.flex = '1';
-    } else {
-      styles.width = '100%';
+    const cssWidths = {
+      xl: WIDTH_RATIOS[widths[0]] && WIDTH_RATIOS[widths[0]] + '%' || widths[0] || '100%',
+      lg: WIDTH_RATIOS[widths[1]] && WIDTH_RATIOS[widths[1]] + '%' || widths[1] || '100%',
+      md: WIDTH_RATIOS[widths[2]] && WIDTH_RATIOS[widths[2]] + '%' || widths[2] || '100%',
+      sm: WIDTH_RATIOS[widths[3]] && WIDTH_RATIOS[widths[3]] + '%' || widths[3] || '100%',
+      xs: WIDTH_RATIOS[widths[4]] && WIDTH_RATIOS[widths[4]] + '%' || widths[4] || '100%'
     }
 
     return (
-      <div style={styles}>
-        {square ? (
-          <div style={{ paddingBottom: '100%', position: 'relative' }}>
-            <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, right: 0 }}>
-              {children}
-            </div>
-          </div>
-        ) : children}
+      <div>
+        {children}
+
+        <style jsx>{`
+          box-sizing: border-box;
+          @media (max-width: ${BREAKS_POINTS.xl}px) {
+            width: ${cssWidths.xl};
+            display: ${cssWidths.xl !== '0' ? 'block' : 'none'};
+          }
+          @media (max-width: ${BREAKS_POINTS.lg}px) {
+            width: ${cssWidths.lg};
+            display: ${cssWidths.lg !== '0' ? 'block' : 'none'};
+          }
+          @media (max-width: ${BREAKS_POINTS.md}px) {
+            width: ${cssWidths.md};
+            display: ${cssWidths.md !== '0' ? 'block' : 'none'};
+          }
+          @media (max-width: ${BREAKS_POINTS.sm}px) {
+            width: ${cssWidths.sm};
+            display: ${cssWidths.sm !== '0' ? 'block' : 'none'};
+          }
+          @media (max-width: ${BREAKS_POINTS.xs}px) {
+            width: ${cssWidths.xs};
+            display: ${cssWidths.xs !== '0' ? 'block' : 'none'};
+          }
+        `}</style>
       </div>
     )
   }

@@ -1,17 +1,16 @@
 import React from 'react';
 
 export default ({ children, maxWidth, ...rest }) => {
-  const styles = {
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    paddingLeft: '10px',
-    paddingRight: '10px',
-    maxWidth: maxWidth || '1140px'
-  }
-
   return (
-    <div style={styles} {...rest}>
+    <div {...rest}>
       {children}
+      <style jsx>{`
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        max-width: ${maxWidth || '1180px'}
+      `}</style>
     </div>
   )
 }
