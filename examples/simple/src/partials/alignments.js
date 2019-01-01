@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Row, Col } from 'gridual';
-import range from 'lodash/range';
 import capitalize from 'lodash/capitalize';
 
 export default () => (

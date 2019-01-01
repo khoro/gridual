@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col } from 'gridual';
+import { Container } from 'gridual';
 
 export default () => (
   <Container>

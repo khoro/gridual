@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'gridual';
 import Partials from './partials';
 
 class App extends Component {
