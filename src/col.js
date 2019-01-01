@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { BREAKS_POINTS } from './helpers';
+import styled from 'styled-components';
+import config from './config';
 
-var WIDTH_RATIOS = {
+const WIDTH_RATIOS = {
   '1': 100
 };
 
@@ -11,14 +11,14 @@ for(var i = 1; i <= 50; i++) {
   }
 }
 
-export default class Col extends Component {
-  render() {
-    const { square, children, ...rest } = this.props;
+export default styled.div`
+  box-sizing: border-box;
 
-    const breakKeys = Object.keys(BREAKS_POINTS);
+  ${props => {
+    const breakKeys = Object.keys(config.breakPoints);
 
     const widths = breakKeys.map((breakKey, index) => {
-      return this.props[breakKeys.slice(index, breakKeys.length).find(i => this.props[i])];
+      return props[breakKeys.slice(index, breakKeys.length).find(i => props[i])];
     });
 
     const cssWidths = {
@@ -29,34 +29,27 @@ export default class Col extends Component {
       xs: WIDTH_RATIOS[widths[4]] && WIDTH_RATIOS[widths[4]] + '%' || widths[4] || '100%'
     }
 
-    return (
-      <div>
-        {children}
-
-        <style jsx>{`
-          box-sizing: border-box;
-          @media (max-width: ${BREAKS_POINTS.xl}px) {
-            width: ${cssWidths.xl};
-            display: ${cssWidths.xl !== '0' ? 'block' : 'none'};
-          }
-          @media (max-width: ${BREAKS_POINTS.lg}px) {
-            width: ${cssWidths.lg};
-            display: ${cssWidths.lg !== '0' ? 'block' : 'none'};
-          }
-          @media (max-width: ${BREAKS_POINTS.md}px) {
-            width: ${cssWidths.md};
-            display: ${cssWidths.md !== '0' ? 'block' : 'none'};
-          }
-          @media (max-width: ${BREAKS_POINTS.sm}px) {
-            width: ${cssWidths.sm};
-            display: ${cssWidths.sm !== '0' ? 'block' : 'none'};
-          }
-          @media (max-width: ${BREAKS_POINTS.xs}px) {
-            width: ${cssWidths.xs};
-            display: ${cssWidths.xs !== '0' ? 'block' : 'none'};
-          }
-        `}</style>
-      </div>
-    )
-  }
-}
+    return `
+      @media ${config.xl} {
+        width: ${cssWidths.xl};
+        display: ${cssWidths.xl !== '0' ? 'block' : 'none'};
+      }
+      @media ${config.lg} {
+        width: ${cssWidths.lg};
+        display: ${cssWidths.lg !== '0' ? 'block' : 'none'};
+      }
+      @media ${config.md} {
+        width: ${cssWidths.md};
+        display: ${cssWidths.md !== '0' ? 'block' : 'none'};
+      }
+      @media ${config.sm} {
+        width: ${cssWidths.sm};
+        display: ${cssWidths.sm !== '0' ? 'block' : 'none'};
+      }
+      @media ${config.xs} {
+        width: ${cssWidths.xs};
+        display: ${cssWidths.xs !== '0' ? 'block' : 'none'};
+      }
+    `
+  }}
+`

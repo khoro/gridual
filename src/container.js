@@ -1,16 +1,10 @@
-import React from 'react';
+import styled from 'styled-components';
+import config from './config';
 
-export default ({ children, maxWidth, ...rest }) => {
-  return (
-    <div {...rest}>
-      {children}
-      <style jsx>{`
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 20px;
-        padding-right: 20px;
-        max-width: ${maxWidth || '1180px'}
-      `}</style>
-    </div>
-  )
-}
+export default styled.div`
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: ${({ maxWidth }) => maxWidth || config.maxWidth};
+`

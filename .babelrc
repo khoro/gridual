@@ -1,8 +1,6 @@
 {
   "plugins": [
-    "@babel/plugin-proposal-export-default-from",
-    "@babel/plugin-proposal-class-properties",
-    "styled-jsx/babel"
+    "@babel/plugin-proposal-export-default-from"
   ],
   "presets": [
     "@babel/env",
