@@ -2,11 +2,7 @@
   "name": "gridual",
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel src -d lib",
-    "prepublish": "npm run build",
-    "site:clean": "rimraf example/build",
-    "site:build": "cd example && npm run build",
-    "site:publish": "npm run site:clean && npm run site:build && cp CNAME example/build && cd example/build && git init && git commit --allow-empty -m 'update example' && git checkout -b gh-pages && touch .nojekyll && git add . && git commit -am 'update example' && git push git@github.com:buildize/gridual gh-pages --force"
+    "build": "babel src -d lib"
   },
   "peerDependencies": {
     "react": "^16.0.0",
