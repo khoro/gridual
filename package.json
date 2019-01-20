@@ -2,7 +2,10 @@
   "name": "gridual",
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel src -d lib"
+    "build": "babel src -d lib",
+    "docs:server": "belge server",
+    "docs:build": "belge build",
+    "docs:publish": "npm run docs:build && now ./.belge -A ../now.json && now alias"
   },
   "peerDependencies": {
     "react": "^16.0.0",
@@ -15,9 +18,9 @@
     "@babel/plugin-proposal-export-default-from": "^7.2.0",
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
+    "belge": "0.0.11",
     "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "rimraf": "^2.6.2"
+    "react-dom": "^16.7.0"
   },
   "version": "1.0.0-alpha.4",
   "dependencies": {

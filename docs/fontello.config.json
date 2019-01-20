@@ -1,0 +1,28 @@
+{
+  "name": "",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": false,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "5e9f01871d44e56b45ecbfd00f4dbc3a",
+      "css": "layout",
+      "code": 59392,
+      "src": "entypo"
+    },
+    {
+      "uid": "xoidjr6q3rzi7tpw6hci1k6srz15g11l",
+      "css": "puzzle",
+      "code": 59393,
+      "src": "typicons"
+    },
+    {
+      "uid": "922ab2cb66943a83de969990289ef1dc",
+      "css": "docs",
+      "code": 59394,
+      "src": "entypo"
+    }
+  ]
+}

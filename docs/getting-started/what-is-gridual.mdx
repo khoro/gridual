@@ -1,0 +1,63 @@
+import { PageMeta } from 'belge';
+
+<PageMeta
+  title="What is Gridual?"
+/>
+
+What is Gridual?
+================
+
+Gridual is a simple, flexible grid system library lets you create responsive,
+painless react web apps in a few steps.
+
+It uses [styled components](https://www.styled-components.com/)
+library to generate its styles so that it becomes very easy to render generated
+styles in server side easily.
+
+Gridual consists three main components, ```Container```, ```Row``` and
+```Col```. Please visit ```Components``` section for more information.
+
+### A responsive example
+
+Test the example below by resizing your browser.
+
+import { Row, Col } from '../../lib';
+import { Box } from '../helpers';
+
+<Row>
+  <Col md="1/2" lg="1/6">
+    <Box />
+  </Col>
+  <Col md="1/2" lg="3/6">
+    <Box />
+  </Col>
+  <Col md="1" lg="2/6">
+    <Box />
+  </Col>
+  <Col sm="1/2">
+    <Box />
+  </Col>
+  <Col sm="1/2">
+    <Box />
+  </Col>
+</Row>
+
+```
+<Row>
+  <Col md="1/2" lg="1/6">
+    <Box />
+  </Col>
+  <Col md="1/2" lg="3/6">
+    <Box />
+  </Col>
+  <Col md="1" lg="2/6">
+    <Box />
+  </Col>
+  <Col sm="1/2">
+    <Box />
+  </Col>
+  <Col sm="1/2">
+    <Box />
+  </Col>
+</Row>
+```

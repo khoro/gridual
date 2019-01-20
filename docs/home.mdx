@@ -1,0 +1,68 @@
+import { Hero, Section, FeatureList, PageMeta } from 'belge';
+import { Container, Row, Col } from '../lib';
+
+<PageMeta
+  title="Gridual - Flexible grid library for react apps"
+/>
+
+<Hero
+  title="Gridual"
+  description="Flexible grid library for react apps"
+  links={[
+    { label: "Get Started", href: "/docs", primary: true },
+    { label: "Examples", href: "/examples" },
+    { label: "Github", href: "https://github.com/khoro/gridual" }
+  ]}
+/>
+
+<Section>
+  <FeatureList
+    width="1/3"
+    items={[
+      {
+        icon: 'layout',
+        title: 'Build modern layouts',
+        description: `Make your app look great for all shapes and sizes using
+          Gridual that you can use components to organize alignments and layouts
+          for react web apps.`
+      },
+      {
+        icon: 'puzzle',
+        title: 'Simple and easy to implement',
+        description: `It is very simple to use and easy to learn Gridual. After
+          a few steps your grid system will be ready to use. Check out our
+          installation documentation for more information.`
+      },
+      {
+        icon: 'docs',
+        title: "Painless isomorphic apps",
+        description: `Gridual uses styled-components that is very
+          powerful and popular library for styling react components to generate
+          styles for both server and client side.`
+      }
+    ]}
+  />
+</Section>
+
+------
+
+<Section>
+  <Container>
+    <Row center>
+      <Col md="1/2">
+        <pre>
+          <code>{`<Container>
+  <Row center middle>
+    <Col sm="1/2" md="1/3" xl="1/4">
+      Hello World!
+    </Col>
+    <Col sm="1/2">
+      Good Bye World!
+    </Col>
+  </Row>
+</Container>`}</code>
+        </pre>
+      </Col>
+    </Row>
+  </Container>
+</Section>

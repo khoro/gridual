@@ -1,0 +1,24 @@
+import { PageMeta } from 'belge';
+
+<PageMeta
+  title="Server Side Rendering"
+/>
+
+Server Side Rendering
+=====================
+
+Gridual uses ```styled-components``` library to generate styles. Please visit
+its server side rendering documentation for detailed information.
+
+Here is an example from the documentation
+
+```javascript
+import { renderToString } from 'react-dom/server'
+import { ServerStyleSheet } from 'styled-components'
+
+const sheet = new ServerStyleSheet()
+const html = renderToString(sheet.collectStyles(<YourApp />))
+const styleTags = sheet.getStyleTags() // or sheet.getStyleElement();
+```
+
+[See More Example](https://www.styled-components.com/docs/advanced#server-side-rendering)

@@ -1,0 +1,30 @@
+import { PageMeta } from 'belge';
+
+<PageMeta
+  title="Col"
+/>
+
+Col
+===
+
+Col component wraps and fix the size by the viewport of the document.
+
+### Usage
+
+```html
+import { Col } from 'gridual';
+
+<Col md="1/2" lg="3/5">
+  your content here
+</Col>
+```
+
+### Props
+
+| Name | Type   | Description                                                             | Default |
+|------|--------|-------------------------------------------------------------------------|---------|
+| xl   | string | sets the content width for xl breaking point. e.g. "50px", "3/5", "25%" | 100%    |
+| lg   | string | sets the content width for lg and above breaking point                  | 100%    |
+| md   | string | sets the content width for md and above breaking point                  | 100%    |
+| sm   | string | sets the content width for sm and above breaking point                  | 100%    |
+| xs   | string | sets the content width for xs and above breaking point                  | 100%    |

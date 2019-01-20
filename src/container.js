@@ -6,5 +6,5 @@ export default styled.div`
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
-  max-width: ${({ maxWidth }) => maxWidth || config.maxWidth};
+  max-width: ${({ maxWidth, fluid }) => (fluid && '100%') || maxWidth || config.maxWidth};
 `

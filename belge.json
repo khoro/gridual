@@ -1,0 +1,46 @@
+{
+  "name": "Gridual",
+  "logo": "./logo.png",
+  "colors": {
+    "primary": "#5B50CD"
+  },
+  "docs": {
+    "Getting Started": [
+      "getting-started/what-is-gridual",
+      "getting-started/installation"
+    ],
+    "Components": [
+      "components/container",
+      "components/row",
+      "components/col"
+    ],
+    "Advanced": [
+      "advanced/server-side-rendering"
+    ]
+  },
+  "header": {
+    "links": [
+      { "label": "Documentation", "href": "/docs" },
+      { "label": "Github", "href": "https://github.com/khoro/gridual" }
+    ]
+  },
+  "footer": {
+    "links": {
+      "Pages": [
+        { "label": "Home", "href": "/" },
+        { "label": "Examples", "href": "/examples" }
+      ],
+      "Docs": [
+        { "label": "Installation", "href": "/docs/getting-started/installation" },
+        { "label": "Container", "href": "/docs/components/container" },
+        { "label": "Row", "href": "/docs/components/row" },
+        { "label": "Col", "href": "/docs/components/col" }
+      ],
+      "Community": [
+        { "label": "Github", "href": "https://github.com/khoro" },
+        { "label": "Twitter", "href": "https://twitter.com/khorohq" },
+        { "label": "Facebook", "href": "https://www.facebook.com/khorohq" }
+      ]
+    }
+  }
+}

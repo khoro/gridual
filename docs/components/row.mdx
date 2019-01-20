@@ -1,0 +1,33 @@
+import { PageMeta } from 'belge';
+
+<PageMeta
+  title="Row"
+/>
+
+Row
+===
+
+Row component wraps and organizes columns.
+
+### Usage
+
+```
+import { Row } from 'gridual';
+
+<Row>
+  <Col>
+  </Col>
+  ... other columns
+</Row>
+```
+
+### Props
+
+| Name    | Type          | Description                                  | Default |
+|---------|---------------|----------------------------------------------|---------|
+| gutter  | number/object | sets the total white spaces between columns. | 30      |
+| center  | boolean       | makes the columns centered horizontally      | false   |
+| right   | boolean       | makes the columns aligned right horizontally | false   |
+| middle  | boolean       | makes the columns centered vertically        | false   |
+| bottom  | boolean       | makes the columns bottomed vertically        | false   |
+| reverse | boolean       | makes the columns reversed                   | false   |
