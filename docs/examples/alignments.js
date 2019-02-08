@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col } from '../../lib';
+import { Container, Row, Col } from '../../src';
 import { Box } from '../helpers';
 import range from 'lodash/range';
 import capitalize from 'lodash/capitalize';

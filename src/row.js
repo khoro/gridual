@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import config from './config';
+import { reduceScreenTypes } from './utils';
 
 export default styled.div`
   display: flex;
@@ -10,63 +11,20 @@ export default styled.div`
 
   ${({ gutter }) => {
     gutter = gutter || config.gutter;
-    if (typeof(gutter) === 'number') gutter = { xs: gutter };
+    if (typeof(gutter) === 'number') gutter = { xl: gutter };
 
-    gutter.xl = gutter.xl || gutter.lg || gutter.md || gutter.sm || gutter.xs;
-    gutter.lg = gutter.lg || gutter.md || gutter.sm || gutter.xs;
-    gutter.md = gutter.md || gutter.sm || gutter.xs;
-    gutter.sm = gutter.sm || gutter.xs;
+    gutter = reduceScreenTypes(gutter);
 
-    return `
-      @media ${config.xl} {
-        margin-right: ${gutter.xl / -2}px;
-        margin-left: ${gutter.xl / -2}px;
+    return Object.keys(gutter).map(type => `
+      @media ${config[type]} {
+        margin-right: ${gutter[type] / -2}px;
+        margin-left: ${gutter[type] / -2}px;
 
         > div {
-          padding-left: ${gutter.xl / 2}px;
-          padding-right: ${gutter.xl / 2}px;
+          padding-left: ${gutter[type] / 2}px;
+          padding-right: ${gutter[type] / 2}px;
         }
       }
-
-      @media ${config.lg} {
-        margin-right: ${gutter.lg / -2}px;
-        margin-left: ${gutter.lg / -2}px;
-
-        > div {
-          padding-left: ${gutter.lg / 2}px;
-          padding-right: ${gutter.lg / 2}px;
-        }
-      }
-
-      @media ${config.md} {
-        margin-right: ${gutter.md / -2}px;
-        margin-left: ${gutter.md / -2}px;
-
-        > div {
-          padding-left: ${gutter.md / 2}px;
-          padding-right: ${gutter.md / 2}px;
-        }
-      }
-
-      @media ${config.sm} {
-        margin-right: ${gutter.sm / -2}px;
-        margin-left: ${gutter.sm / -2}px;
-
-        > div {
-          padding-left: ${gutter.sm / 2}px;
-          padding-right: ${gutter.sm / 2}px;
-        }
-      }
-
-      @media ${config.xs} {
-        margin-right: ${gutter.xs / -2}px;
-        margin-left: ${gutter.xs / -2}px;
-
-        > div {
-          padding-left: ${gutter.xs / 2}px;
-          padding-right: ${gutter.xs / 2}px;
-        }
-      }
-    `
+    `).join('')
   }}
 `

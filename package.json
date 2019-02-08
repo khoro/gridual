@@ -22,7 +22,7 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
   },
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.5",
   "dependencies": {
     "styled-components": "^4.1.3"
   }

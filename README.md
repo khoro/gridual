@@ -1,10 +1,10 @@
-gridual
+Gridual
 =======
 
 gridual is a flexible grid system for react apps.
 (still in development, help us ✌)
 
-[Example Website](http://gridual.open.buildize.com)
+[Example Website](http://gridual.open.khoro.io)
 
 ### Installation
 
@@ -40,7 +40,3 @@ import { Container, Row, Col } from 'gridual';
   </Row>
 </Container>
 ```
-
-## Who Uses Gridual
-
-- [Coorsy](https://coorsy.com)
