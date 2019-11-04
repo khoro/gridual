@@ -18,12 +18,13 @@
     "@babel/plugin-proposal-export-default-from": "^7.2.0",
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
-    "belge": "0.0.11",
+    "belge": "0.0.12",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
   },
-  "version": "1.0.0-alpha.5",
+  "version": "1.0.0-alpha.6",
   "dependencies": {
+    "next-transpile-modules": "^2.0.0",
     "styled-components": "^4.1.3"
   }
 }
