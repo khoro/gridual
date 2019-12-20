@@ -22,7 +22,7 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
   },
-  "version": "1.0.0-alpha.6",
+  "version": "1.0.0-alpha.7",
   "dependencies": {
     "next-transpile-modules": "^2.0.0",
     "styled-components": "^4.1.3"

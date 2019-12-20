@@ -1,4 +1,4 @@
-const config = {
+const baseConfig = {
   breakPoints: {
     xl: 9999999,
     lg: 1200,
@@ -11,7 +11,10 @@ const config = {
 }
 
 export const configure = values => {
-  Object.assign(config, values);
+  const config = {
+    ...baseConfig,
+    ...values
+  };
 
   for(let bp in config.breakPoints) {
     config[bp] = `(max-width: ${config.breakPoints[bp]}px)`;
