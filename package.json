@@ -17,13 +17,14 @@
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
     "@babel/plugin-proposal-export-default-from": "^7.2.0",
+    "@babel/plugin-transform-object-assign": "^7.7.4",
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
     "belge": "0.0.12",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
   },
-  "version": "1.0.0-alpha.8",
+  "version": "1.0.0-alpha.9",
   "dependencies": {
     "next-transpile-modules": "^2.0.0",
     "styled-components": "^4.1.3"

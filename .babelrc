@@ -1,6 +1,7 @@
 {
   "plugins": [
-    "@babel/plugin-proposal-export-default-from"
+    "@babel/plugin-proposal-export-default-from",
+    "@babel/plugin-transform-object-assign"
   ],
   "presets": [
     "@babel/env",
