@@ -3,6 +3,7 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "babel src -d lib",
+    "prepublish": "npm run build",
     "docs:server": "belge server",
     "docs:build": "belge build",
     "docs:publish": "npm run docs:build && now ./.belge -A ../now.json && now alias"
@@ -22,7 +23,7 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
   },
-  "version": "1.0.0-alpha.7",
+  "version": "1.0.0-alpha.8",
   "dependencies": {
     "next-transpile-modules": "^2.0.0",
     "styled-components": "^4.1.3"

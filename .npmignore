@@ -1,3 +1,7 @@
 .babelrc
 .DS_Store
 /.belge
+/src
+/docs
+/CNAME
+/now.js
