@@ -6,8 +6,11 @@ const config = {
     sm: 768,
     xs: 576
   },
-  maxWidth: '1180px',
-  gutter: 30
+  gutter: 30,
+  container: {
+    padding: 20,
+    maxWidth: '1180px'
+  }
 };
 
 export const configure = values => {
