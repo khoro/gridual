@@ -5,9 +5,9 @@ import { reduceScreenTypes } from './utils';
 export default styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: ${({ right, center }) => right ? 'flex-end' : center ? 'center' : 'unset'};
-  align-items: ${({ bottom, middle }) => bottom ? 'flex-end' : middle ? 'center' : 'unset'};
-  flex-direction: ${({ reverse }) => reverse ? 'row-reverse' : 'unset'};
+  justify-content: ${({ right, center }) => right ? 'flex-end' : center ? 'center' : 'flex-start'};
+  align-items: ${({ bottom, middle }) => bottom ? 'flex-end' : middle ? 'center' : 'flex-start'};
+  flex-direction: ${({ reverse }) => reverse ? 'row-reverse' : 'row'};
 
   ${({ gutter }) => {
     gutter = gutter || config.gutter;
